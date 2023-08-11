@@ -1,4 +1,4 @@
-# Validador de CPF - Exemplo
+# Validador de CPF 
 
 Este é um projeto de exemplo para demonstrar a implementação de um validador de CPF em JavaScript, juntamente com uma interface web simples para testá-lo. O validador segue as práticas recomendadas de programação, incluindo sanitização de entrada, prevenção contra ataques de injeção e manipulação de erros.
 
