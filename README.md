@@ -18,7 +18,7 @@ Este é um projeto de exemplo para demonstrar a implementação de um validador 
 
 1. Clone este repositório para sua máquina local usando `git clone`.
 
-2. Abra o arquivo `exemplo.html` em um navegador da web.
+2. Abra o arquivo `index.html` em um navegador da web.
 
 3. Insira um CPF no campo de entrada.
 
