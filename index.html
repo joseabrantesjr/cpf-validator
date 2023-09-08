@@ -6,24 +6,24 @@
   <title>Teste de Validação de CPF</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+<body class="bg-gray-900 min-h-screen flex items-center justify-center">
 
-  <div class="bg-white p-8 rounded-lg shadow-lg flex">
+  <div class="bg-gray-700 p-8 rounded-lg shadow-lg flex">
     <!-- Left Column - Validation Form -->
     <div class="w-1/2 pr-4">
-      <h1 class="text-2xl font-semibold mb-6">Validação de CPF</h1>
+      <h1 class="text-2xl font-semibold mb-6 text-white">Validação de CPF</h1>
 
       <div class="mb-4">
-        <label for="cpfInput" class="block text-gray-700">Digite um CPF:</label>
-        <input type="text" id="cpfInput" oninput="checkCPFValidity()" class="w-full border rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-300">
+        <label for="cpfInput" class="block text-gray-200">Digite um CPF:</label>
+        <input type="text" id="cpfInput" oninput="checkCPFValidity()" class="w-full border rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-300 bg-gray-800 text-white">
       </div>
       <div id="cpfStatus" class="mt-2"></div>
     </div>
 
     <!-- Right Column - CPF Generation Form -->
     <div class="w-1/2 pl-4">
-      <h1 class="text-2xl font-semibold mb-6">Gerar CPF Válido</h1>
-      <button id="generateCPFButton" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">Gerar CPF Válido</button>
+      <h1 class="text-2xl font-semibold mb-6 text-white">Gerar CPF Válido</h1>
+      <button id="generateCPFButton" class="bg-green-300 text-gray-900 py-2 px-4 rounded-md hover:bg-green-400 focus:outline-none focus:ring focus:border-blue-300">Gerar CPF Válido</button>
     </div>
   </div>
 
