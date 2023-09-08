@@ -4,18 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Teste de Validação de CPF</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <h1>Teste de Validação de CPF</h1>
-  <label for="cpfInput">Digite um CPF:</label>
-  <input type="text" id="cpfInput" oninput="checkCPFValidity()">
-  <p id="cpfStatus"></p>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
 
-  <button id="generateCPFButton">Gerar CPF Válido</button>
-  <p id="generatedCPF"></p> <!-- Elemento para exibir o CPF gerado -->
-  
+  <div class="bg-white p-8 rounded-lg shadow-lg flex">
+    <!-- Left Column - Validation Form -->
+    <div class="w-1/2 pr-4">
+      <h1 class="text-2xl font-semibold mb-6">Validação de CPF</h1>
+
+      <div class="mb-4">
+        <label for="cpfInput" class="block text-gray-700">Digite um CPF:</label>
+        <input type="text" id="cpfInput" oninput="checkCPFValidity()" class="w-full border rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-300">
+      </div>
+      <div id="cpfStatus" class="mt-2"></div>
+    </div>
+
+    <!-- Right Column - CPF Generation Form -->
+    <div class="w-1/2 pl-4">
+      <h1 class="text-2xl font-semibold mb-6">Gerar CPF Válido</h1>
+      <button id="generateCPFButton" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300">Gerar CPF Válido</button>
+    </div>
+  </div>
+
   <script src="cpf_validator.js"></script>
   <script src="cpf_generator.js"></script>
+  <script>
+    // JavaScript for CPF validation and message display
+    function checkCPFValidity() {
+      const cpfInput = document.getElementById("cpfInput");
+      const cpfStatus = document.getElementById("cpfStatus");
 
+      // Check CPF validity here (you can implement your CPF validation logic)
+      const isValid = validateCPF(cpfInput.value);
+
+      if (isValid) {
+        cpfStatus.innerHTML = "CPF válido";
+        cpfStatus.classList.remove("bg-red-500");
+        cpfStatus.classList.add("bg-green-500");
+      } else {
+        cpfStatus.innerHTML = "CPF inválido";
+        cpfStatus.classList.remove("bg-green-500");
+        cpfStatus.classList.add("bg-red-500");
+      }
+    }
+  </script>
 </body>
 </html>

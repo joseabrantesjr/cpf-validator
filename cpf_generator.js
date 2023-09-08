@@ -32,6 +32,5 @@ document.addEventListener('DOMContentLoaded', function () {
         const validCPF = generateValidCpf();
         cpfInput.value = validCPF;
         checkCPFValidity();
-        generatedCPF.textContent = `CPF gerado: ${validCPF}`;
     });
 });
